@@ -24,7 +24,6 @@ export default function Home() {
     router.push('/my-receipts');
   };
 
-  // Função para redirecionar para a tela de Nova Receita
   const handleNewReceipt = () => {
     router.push('/new-receipts');
   };
@@ -48,7 +47,6 @@ export default function Home() {
         </View>
 
         <View style={styles.mainCard}>
-          {/* Opção 1: Minhas receitas */}
           <TouchableOpacity 
             style={styles.optionButton} 
             onPress={handleMyReceipts}
@@ -67,10 +65,9 @@ export default function Home() {
 
           <View style={styles.separator} />
 
-          {/* Opção 2: Nova receita (AGORA COM REDIRECIONAMENTO) */}
           <TouchableOpacity 
             style={styles.optionButton}
-            onPress={handleNewReceipt} // <-- NOVA FUNÇÃO AQUI
+            onPress={handleNewReceipt} 
           >
             <View style={[styles.iconContainer, { backgroundColor: ICON_RED_BG }]}>
               <Ionicons name="medkit-outline" size={24} color={ICON_RED_FG} />
